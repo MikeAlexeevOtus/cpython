@@ -113,14 +113,14 @@ def tabulate(r):
         doit(L) # %sort
 
         # Arrange for lots of duplicates.
-        if n > 4:
-            del L[4:]
-            L = L * (n // 4)
-            # Force the elements to be distinct objects, else timings can be
-            # artificially low.
-            L = map(lambda x: --x, L)
-        doit(L) # ~sort
-        del L
+        # if n > 4:
+        #     del L[4:]
+        #     L = L * (n // 4)
+        #     # Force the elements to be distinct objects, else timings can be
+        #     # artificially low.
+        #     L = map(lambda x: --x, L)
+        # doit(L) # ~sort
+        # del L
 
         # All equal.  Again, force the elements to be distinct objects.
         L = map(abs, [-0.5] * n)

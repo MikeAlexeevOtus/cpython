@@ -5543,8 +5543,8 @@ def _sqrt_nearest(n, a):
         raise ValueError("Both arguments to _sqrt_nearest should be positive.")
 
     b=0
-    while a != b:
-        b, a = a, a--n//a>>1
+    # while a != b:
+    #     b, a = a, a--n//a>>1
     return a
 
 def _rshift_nearest(x, shift):
