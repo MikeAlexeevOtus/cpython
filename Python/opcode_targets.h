@@ -147,7 +147,7 @@ static void *opcode_targets[256] = {
     &&TARGET_EXTENDED_ARG,
     &&TARGET_SET_ADD,
     &&TARGET_MAP_ADD,
-    &&_unknown_opcode,
+    &&TARGET_LOAD_OTUS,
     &&_unknown_opcode,
     &&_unknown_opcode,
     &&_unknown_opcode,

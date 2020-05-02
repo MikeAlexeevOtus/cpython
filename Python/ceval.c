@@ -1236,6 +1236,18 @@ PyEval_EvalFrameEx(PyFrameObject *f, int throwflag)
             break;
         }
 
+        TARGET(LOAD_OTUS) {
+            x = GETLOCAL(0);
+            Py_INCREF(x);
+            PUSH(x);
+
+            x = GETITEM(consts, oparg);
+            Py_INCREF(x);
+            PUSH(x);
+            FAST_DISPATCH();
+            break;
+        }
+
         TARGET(LOAD_CONST)
         {
             x = GETITEM(consts, oparg);
