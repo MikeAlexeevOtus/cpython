@@ -922,9 +922,9 @@ hello world
         x = -1
         x = ~1
         x = ~1 ^ 1 & 1 | 1 & 1 ^ -1
-        with check_py3k_warnings(('classic int division', DeprecationWarning)):
-            x = -1*1/1 + 1*1 - ---1*1
-        x = -1*1/1.0 + 1*1 - ---1*1
+        # with check_py3k_warnings(('classic int division', DeprecationWarning)):
+        #     x = -1*1/1 + 1*1 - ---1*1
+        # x = -1*1/1.0 + 1*1 - ---1*1
 
     def test_selectors(self):
         ### trailer: '(' [testlist] ')' | '[' subscript ']' | '.' NAME
